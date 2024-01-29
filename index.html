@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Site-Inspired by Medium</title>
+    <!-- Tailwind cdn -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!--  -->
+    <!-- Remic Icon link -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css" rel="stylesheet" />
+    <!--  -->
+    <!-- Customize Css -->
+    <link rel="stylesheet" href="./medium.css" />
+</head>
+
+<body class="font-sans ">
+    <!-- This is the header -->
+    <header class="w-full h-auto bg-orange-400 relative">
+        <!-- This is the top nav bar -->
+        <nav id="navbar" class="bg-transparent p-5 border-b border-black w-full top-0 backdrop-blur-lg backdrop-invert z-20">
+            <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+                <div class="flex flex-wrap items-center justify-between">
+                    <div class="flex items-center">
+                        <p class="lg:text-5xl logo-font font-bold md:text-4xl sm:text-md text-white">
+                            <i class="ri-bubble-chart-fill"></i>Medium
+                        </p>
+                    </div>
+                    <!-- This will be hidden on small devices -->
+                    <div class="hidden sm:flex sm:items-center sm:ml-6">
+                        <div class="flex space-x-4">
+                            <a href="#"
+                                class="text-gray-200 hover:bg-gray-700 hover:text-white rounded-3xl transition-all duration-[400ms] ease-linear px-4 py-2 text-sm font-medium">Our
+                                story</a>
+                            <a href="#"
+                                class="text-gray-200 hover:bg-gray-700 hover:text-white rounded-3xl transition-all duration-[400ms] ease-linear px-4 py-2 text-sm font-medium">Membership</a>
+                            <a href="#"
+                                class="text-gray-200 hover:bg-gray-700 hover:text-white rounded-3xl transition-all duration-[400ms] ease-linear px-4 py-2 text-sm font-medium">Write</a>
+                            <a href="#"
+                                class="text-gray-200 transition-all duration-[400ms] ease-linear hover:bg-gray-700 hover:text-white rounded-3xl px-4 py-2 text-sm font-medium">Sign
+                                in</a>
+                            <a href="#" class="bg-gray-900 text-white rounded-3xl px-4 py-2 text-sm font-medium"
+                                aria-current="page">Get started</a>
+                        </div>
+                    </div>
+                    <div class="sm:hidden">
+                        <button type="button" id="mobile-menu-button"
+                            class="text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white invert">
+                            <span class="sr-only">Open main menu</span>
+                            <svg class="h-6 w-6 text-black" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navigation bar on mobile devices -->
+            <div class="hidden sm:hidden" id="mobile-menu">
+                <div class="bg-transparent px-4 pt-2 pb-3 space-y-1">
+                    <a href="#" class="bg-gray-900 text-white block rounded-3xl px-4 py-2 text-base font-medium"
+                        aria-current="page">Get Started</a>
+                    <a href="#"
+                        class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-3xl px-4 transition-all py-2 text-base font-medium">Our
+                        Story</a>
+                    <a href="#"
+                        class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-3xl px-4 transition-all py-2 text-base font-medium">Membership</a>
+                    <a href="#"
+                        class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-3xl px-4 transition-all py-2 text-base font-medium">Write</a>
+                    <a href="#"
+                        class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-3xl px-4 transition-all py-2 text-base font-medium">Sign
+                        in</a>
+                </div>
+            </div>
+        </nav>
+        <!-- This is the content below the navbar -->
+        <div class="max-w-full h-auto border-b border-black flex flex-col-reverse sm:flex-row">
+            <!-- Content on the left (for small screens) -->
+            <div id="header-left" class="p-4 sm:p-16 w-full sm:w-1/2 h-auto text-center sm:text-left">
+                <h1 class="logo-font text-8xl mb-7">Stay curious</h1>
+                <p class="font-semibold w-full text-2xl mb-7 text-gray-800">
+                    Discover stories, thinking, and expertise from writers on any topic.
+                </p>
+                <button
+                    class="bg-gray-900 text-white font-semibold text-xl hover:bg-black transition-all px-10 mt-4 py-2 rounded-3xl">
+                    Start reading
+                </button>
+            </div>
+
+            <!-- Content on the right (for small screens) -->
+            <div id="header-right" class="sm:basis-1/2 w-full sm:w-1/2 h-auto">
+                <div>
+                    <img class="lg:max-w-md mx-auto" src="./assets/header-side.gif" alt="animated-moving-gif" />
+                </div>
+            </div>
+        </div>
+    </header>
+    <!--  -->
+
+    <!-- This is the section where all the article will appear -->
+    <main class="w-full h-screen px-6 sm:px-6 md:px-8 lg:px-10 py-12 ">
+        <!-- Trending Article Section -->
+        <section class="container mx-auto">
+            <p class="text-xl font-normal">
+                <i class="ri-funds-line text-xl font-normal"></i><span class="font-bold"> Trending on Medium</span>
+            </p>
+            <div id="trending-articles" class="px-4 sm:px-8 md:px-12 py-3">
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                    <!-- Trending article - 1 -->
+                    <div id="trend-article-1" class="relative cursor-pointer">
+                        <div id="trend-article-1-heading" class="inline-block hover-box">
+                            <img class="inline-block w-6 h-6 rounded-full object-cover mr-2"
+                                src="./assets/person-1.avif" alt="" />
+                            <span class="font-semibold text-xs">Kevin Owens</span>
+                        </div>
+                        <div id="trend-article-1-content"  class="openPopup w-full h-full py-2 px-1">
+                            <h4 class="font-bold capitalize mb-2 line-clamp-2 lg:line-clamp-none md:line-clamp-none">
+                                104 favorite foods of 2024
+                            </h4>
+                            <h4 class="text-gray-500 text-sm">Jan 1, 2024 5 min read</h4>
+                        </div>
+
+                        <!-- POpup window -->
+                        <div id="popup-window">
+                            <div id="overlay" class="hidden fixed top-0 left-0 w-full h-full bg-white z-20"></div>
+                            <div id="popup" class="hidden fixed top-0 left-0 shadow-2xl w-full h-screen z-20 cursor-default p-5 overflow-y-auto">
+                                <!-- Close Button -->
+                                    <button id="closePopup" class="absolute top-0 right-0 text-3xl"><i class="ri-close-circle-fill"></i></button>
+                                <!--  -->
+                                <nav id="article-navbar" class="flex justify-between items-center flex-wrap gap-4 px-4 py-2">
+                                    <!-- Logo -->
+                                    <div class="flex items-center">
+                                        <p class="lg:text-2xl md:text-xl sm:text-lg text-2xl font-bold text-black">
+                                            <i class="ri-bubble-chart-fill"></i>Medium
+                                        </p>
+                                    </div>
+                                
+                                    <!-- Search Bar -->
+                                    <div class="flex-grow mt-4 md:mt-0">
+                                        <span class="flex items-center">
+                                            <i id="searchIcon" class="ri-search-eye-line inline text-xl md:text-3xl"></i>
+                                            <input id="searchInput" type="text" placeholder="Search" class="w-1/2 px-2 md:px-4 py-1 md:py-2 focus:outline-none focus:border-blue-500 ">
+                                        </span>
+                                    </div>                                    
+                                
+                                    <!-- Right Icons -->
+                                    <div class="flex items-center gap-10 text-gray-600 mt-4 sm:w-full w-full lg:w-auto md:w-full justify-around">
+                                        <!-- Write Icon -->
+                                        <button class="text-xs md:text-base"><i class="ri-quill-pen-fill text-2xl"></i>Write</button>
+                                        <button class="text-xs md:text-base bg-green-600 text-white px-3 rounded-full py-1">Sign Up</button>
+                                        <button class="text-xs md:text-base">Sign In</button>
+                                        <!-- Profile Pic Icon -->
+                                        <div class="relative">
+                                            <i class="ri-account-pin-circle-line text-xl md:text-3xl cursor-pointer"></i>
+                                        </div>
+                                    </div>
+                                    
+                                </nav>
+                                
+                        
+                                <!-- Your Popup Content Goes Here -->
+                                <main id="Popup-Article-content" class="mx-auto w-full sm:w-full lg:w-1/2 md:w-1/2 grid gap-y-10 mt-5">
+                                    <h1 class="text-5xl font-bold ">Let Her Go, They Said.</h1>
+                                    <!-- Article Heading with pic -->
+                                    <div class="flex flex-row">
+                                        <div class="self-center">
+                                            <img class="inline-block w-11 h-11 rounded-full object-cover mr-2"
+                                                src="./assets/person-1.avif" alt="author Image" />
+                                        </div>
+                                        <div>
+                                            <span class="text-base">Justin Hawkens  .  <button class="text-green-700">Follow</button></span>
+                                            <div class="text-gray-500 text-sm">
+                                                <span>10 min read . </span> 
+                                                <span>3 days ago</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--  -->
+
+                                    <!-- Icons -->
+                                    <div class="icons flex text-lg text-gray-500">
+                                        <div class="flex items-center space-x-4 left-icons">
+                                            <span class="clap flex items-center cursor-pointer hover:text-black">
+                                                <i class="text-2xl ri-hand-heart-fill"></i>
+                                                <span class="ml-1">240</span>
+                                            </span>
+                                            <span class="comment flex items-center cursor-pointer hover:text-black">
+                                                <i class="text-2xl ri-chat-1-line"></i>
+                                                <span class="ml-1">10</span>
+                                            </span>
+                                        </div>
+                                        <!-- Right Icons -->
+                                        <div class="flex items-center space-x-4 right-icons ml-auto">
+                                            <i class="cursor-pointer hover:text-black text-2xl ri-bookmark-2-line"></i>
+                                            <i class="cursor-pointer hover:text-black text-2xl ri-movie-line"></i>
+                                            <i class="cursor-pointer hover:text-black text-2xl ri-share-2-fill"></i>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Image -->
+                                    <figure>
+                                        <img class="w-full" src="/assets/article-10.jpg" alt="Elephant at sunset" />
+                                        <figcaption>An elephant at sunset</figcaption>
+                                    </figure>
+                                    
+                                    <!-- Whole Article  -->
+                                    <div>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente corrupti velit voluptates suscipit culpa vitae explicabo labore numquam doloremque voluptatibus, aut accusamus ut cum vel perferendis temporibus quos. Facere sit, asperiores soluta fuga fugit sapiente at, maiores dicta natus, ipsum beatae reiciendis aspernatur! Quae, aperiam cumque excepturi quo quis eos repudiandae aliquid labore possimus. Aspernatur odio error corporis soluta quo ut rerum temporibus, perferendis praesentium incidunt, obcaecati possimus aliquid doloribus nobis maiores corrupti quod qui, neque facere expedita maxime velit nihil. Numquam officia modi, temporibus similique sint aspernatur debitis laborum vero deserunt atque dicta incidunt sapiente cumque at! Ad reprehenderit aliquid doloremque minus molestias optio aut a repudiandae expedita, cumque laboriosam possimus voluptatem maxime eos, suscipit totam perspiciatis in ratione esse! Sunt ullam aspernatur quaerat sapiente earum enim rerum amet commodi dignissimos odit? Similique tempore officia aspernatur perspiciatis asperiores excepturi, earum, vel totam necessitatibus laborum fugit molestias distinctio repudiandae. Doloremque optio quae quaerat ducimus tempore sequi impedit. Delectus inventore harum eveniet dolor? Iure adipisci quae dolorum magni voluptates dolore! Itaque officiis ea molestiae fugiat voluptate saepe sed error cumque repellat tenetur ullam quo, natus, eum dolores porro odio animi debitis blanditiis illo, soluta incidunt veritatis. Minus vitae expedita enim sed!</p>
+                                    </div>
+                                </main>
+                                <!-- ... -->
+                            </div>
+                        </div>
+                        
+                        <!--  -->
+                    </div>
+                    <!-- Trending article - 2 -->
+                    <div id="trend-article-2" class="relative cursor-pointer">
+                        <div id="trend-article-2-heading" class="cursor-pointer inline-block  hover-box">
+                            <img class="inline-block w-6 h-6 rounded-full object-cover mr-2"
+                                src="./assets/person-2.avif" alt="" />
+                            <span class="font-semibold text-xs">Seth Rollins</span>
+                        </div>
+                        <div id="trend-article-2-content" class="openPopup w-full h-full py-2 px-1">
+                            <h4 class="font-bold capitalize mb-2 line-clamp-2 lg:line-clamp-none md:line-clamp-none">
+                                Fine-tune a Mistral-7b model with Direct Preference
+                            </h4>
+                            <h4 class="text-gray-500 text-sm">Jan 1, 2024 5 min read</h4>
+                        </div>
+                    </div>
+                    <!-- Trending article - 3 -->
+                    <div id="trend-article-3" class="relative cursor-pointer">
+                        <div id="trend-article-3-heading" class="cursor-pointer inline-block  hover-box">
+                            <img class="inline-block w-6 h-6 rounded-full object-cover mr-2"
+                                src="./assets/person-3.avif" alt="" />
+                            <span class="font-semibold text-xs">Roman Reigns</span>
+                        </div>
+                        <div id="trend-article-3-content" class="openPopup w-full h-full py-2 px-1">
+                            <h4 class="font-bold capitalize mb-2 line-clamp-2 lg:line-clamp-none md:line-clamp-none">
+                                How To Be A Better Software Engineer In 2024
+                            </h4>
+                            <h4 class="text-gray-500 text-sm">Jan 1, 2024 12 min read</h4>
+                        </div>
+                    </div>
+                    <!-- Trending article - 4 -->
+                    <div id="trend-article-4" class="relative cursor-pointer">
+                        <div id="trend-article-4-heading" class="cursor-pointer inline-block  hover-box">
+                            <img class="inline-block w-6 h-6 rounded-full object-cover mr-2"
+                                src="./assets/person-4.avif" alt="" />
+                            <span class="font-semibold text-xs">Roman Reigns</span>
+                        </div>
+                        <div id="trend-article-4-content" class="openPopup w-full h-full py-2 px-1">
+                            <h4 class="font-bold capitalize mb-2 line-clamp-2 lg:line-clamp-none md:line-clamp-none">
+                                2023: A Review of the Year in Neuroscience
+                            </h4>
+                            <h4 class="text-gray-500 text-sm">Dec 31, 2023 11 min read</h4>
+                        </div>
+                    </div>
+                    <!-- Trending article - 5 -->
+                    <div id="trend-article-5" class="relative cursor-pointer">
+                        <div id="trend-article-5-heading" class="cursor-pointer inline-block  hover-box">
+                            <img class="inline-block w-6 h-6 rounded-full object-cover mr-2"
+                                src="./assets/person-5.avif" alt="" />
+                            <span class="font-semibold text-xs">Roman Reigns</span>
+                        </div>
+                        <div id="trend-article-5-content" class="openPopup w-full h-full py-2 px-1">
+                            <h4 class="font-bold capitalize mb-2 line-clamp-2 lg:line-clamp-none md:line-clamp-none">
+                                She Brought Her Bullshit to the Party
+                            </h4>
+                            <h4 class="text-gray-500 text-sm">Jan 1, 2024 5 min read</h4>
+                        </div>
+                    </div>
+                    <!-- Trending article - 6 -->
+                    <div id="trend-article-6" class="relative cursor-pointer">
+                        <div id="trend-article-6-heading" class="cursor-pointer inline-block  hover-box">
+                            <img class="inline-block w-6 h-6 rounded-full object-cover mr-2"
+                                src="./assets/person-6.avif" alt="" />
+                            <span class="font-semibold text-xs">Roman Reigns</span>
+                        </div>
+                        <div id="trend-article-6-content" class="openPopup w-full h-full py-2 px-1">
+                            <h4 class="font-bold capitalize mb-2 line-clamp-2 lg:line-clamp-none md:line-clamp-none">
+                                Willpower Is Not The Solution
+                            </h4>
+                            <h4 class="text-gray-500 text-sm">Jan 1, 2024 5 min read</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--  -->
+
+        <!-- Section Where all the articles Come -->
+        <section class="mt-[7rem]">
+
+            <div id="parent-article-section" class="flex flex-row flex-wrap-reverse">
+                <!-- Article Section -->
+                <div class="basis-full  sm:basis-2/3">
+                    <div class="flex flex-row pr-2 sm:pr-11 gap-2 sm:gap-3"> 
+                        <div id="article-content" class="basis-full">
+                            <div id="article-1">
+                                <div id="article-1-heading" class="cursor-pointer inline-block hover-box">
+                                    <img class="inline-block w-6 h-6 rounded-full object-cover sm:w-8 sm:h-8" 
+                                        src="./assets/person-1.avif" alt="" />
+                                    <span class="font-semibold text-sm sm:text-base">Kevin Owens</span>
+                                </div>
+                                <div id="article-1-content" class="w-full h-full py-2 relative openPopup cursor-pointer">
+                                    <h4 class="font-bold capitalize text-base sm:text-xl md:lg-xl lg-xl line-clamp-1 lg:line-clamp-none md:line-clamp-none">
+                                        Earthquakes in Japan: We are Always Prepared
+                                    </h4>
+                                    <h4 class="text-base sm:text-lg md:text-lg lg:text-lg text-gray-500 mb-2 line-clamp-2 lg:line-clamp-none md:line-clamp-none">
+                                        Yet another trying time has come, but I believe in their resilience
+                                    </h4>
+                                    <div class="flex flex-row">
+                                        <div class="basis-4/5">
+                                            <h4 class="text-sm sm:text-base md:text-lg lg:text-xl xl:text-sm text-gray-500 mb-2">
+                                                Jan 1, 2024 5 min read
+                                            </h4>
+                                        </div>
+                                        <div class="basis-1/5 text-xl text-gray-500 sm:text-2xl"><i class="ri-bookmark-2-line"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="basis-full lg:basis-1/3 md:basis-1/2 sm:1/4"><img class="w-full h-auto" src="/assets/article-1.jpg" alt=""></div>
+                    </div>
+                    <div id="dynamic-content" class="mt-4"></div>
+                </div>
+                
+                <!--  -->
+                
+                <aside id="side-elm-articles" class="basis-full sm:basis-1/3">
+                    <div id="inside-aside">
+                        <div class="aside-content">
+                            <p class="font-semibold">Discover more of what matters to you</p>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-5 px-6 mt-5 text-base sm:text-sm cursor-pointer gap-y-4">
+                                <div class="mb-4 sm:mb-0">Programming</div>
+                                <div class="mb-4 sm:mb-0">Data Science</div>
+                                <div class="mb-4 sm:mb-0">Technology</div>
+                                <div class="mb-4 sm:mb-0">Self Improvement</div>
+                                <div class="mb-4 sm:mb-0">Writing</div>
+                                <div class="mb-4 sm:mb-0">Relationships</div>
+                                <div class="mb-4 sm:mb-0">Machine Learning</div>
+                                <div class="mb-4 sm:mb-0">Productivity</div>
+                                <div class="mb-4 sm:mb-0">Politics</div>
+                            </div>
+                            
+                            <p class="text-green-800 text-sm mt-5 hover:text-black cursor-pointer inline-block mb-5 lg:mb-0 md:mb-1 sm:mb-2 ">See more
+                                topics</p>
+                        </div>
+                        <div id="aside-footer" class="mt-11 hidden sm:block">
+                            <footer>
+                                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 text-sm cursor-pointer gap-3 text-gray-600 mb-14">
+                                    <div>Help</div>
+                                    <div>Status</div>
+                                    <div>About</div>
+                                    <div>Careers</div>
+                                    <div>Blog</div>
+                                    <div>Privacy</div>
+                                    <div>Terms</div>
+                                    <div class="line-clamp-1">Text to speech</div>
+                                    <div>Terms</div>
+                                </div>
+                            </footer>
+                        </div>
+                        
+                    </div>
+                </aside>
+                
+            </div>
+        </section>
+        <!--  -->
+        
+    </main>
+    <script src="./medium.js"></script>
+    <script src="./getdata.js"></script>
+    <script src="./hoverBox.js"></script>
+    <script src="./articlewindow.js"></script>
+</body>
+
+</html>
